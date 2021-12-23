@@ -24,3 +24,25 @@ Auth::routes(
 );
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function(){
+    Route::get('/', function(){
+        return 'halaman admin';
+    });
+
+    Route::get('profil', function(){
+        return 'halaman profile admin';
+    
+    });
+});
+
+//Hanya untuk role pengguna
+Route::group(['prefix' => 'pengguna', 'middleware' => ['auth', 'role:pengguna']], function(){
+    Route::get('/', function(){
+        return 'halaman pengguna';
+    });
+
+    Route::get('profil', function(){
+        return 'halaman profile pengguna';
+    
+    });
+});
