@@ -248,21 +248,32 @@ return [
         ],
         ['header' => 'Menu Utama'],
         [
-            'text' => 'Buku',
+            'text' => 'Update Profile',
             'url'  => 'admin/buku',
             'icon' => 'fas fa-fw fa-book',
         ],
         [
-            'text' => 'Pengarang',
+            'text' => 'Update Kegiatan',
             'url'  => 'admin/pengarang',
+            'icon' => 'fas fa-fw fa-list',
+        ],
+        [
+            'text' => 'Update Anak Asuh',
+            'url'  => 'admin/menu_lain',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'Menu Lain',
+            'text' => 'Update Donatur',
             'url'  => 'admin/menu_lain',
-            'icon' => 'fas fa-fw fa-list',
+            'icon' => 'fas fa-fw fa-receipt',
+        ],
+        [
+            'text' => 'Laporan Donasi',
+            'url'  => 'admin/menu_lain',
+            'icon' => 'fas fa-fw fa-book',
         ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
