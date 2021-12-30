@@ -14,7 +14,7 @@ class PengasuhController extends Controller
      */
     public function index()
     {
-        //
+        return view('pengasuh.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class PengasuhController extends Controller
      */
     public function create()
     {
-        //
+        return view('pengasuh.index');
     }
 
     /**

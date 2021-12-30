@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\anak_asuh;
+use App\Models\pengasuh;
 use Illuminate\Http\Request;
 
-class AnakAsuhController extends Controller
+class PengasuhController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AnakAsuhController extends Controller
      */
     public function index()
     {
-        //
+        return view('AnakAsuh.index');
     }
 
     /**
@@ -41,10 +41,10 @@ class AnakAsuhController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\anak_asuh  $anak_asuh
+     * @param  \App\Models\pengasuh  $pengasuh
      * @return \Illuminate\Http\Response
      */
-    public function show(anak_asuh $anak_asuh)
+    public function show(AnakAsuh $AnakAsuh)
     {
         //
     }
@@ -52,10 +52,10 @@ class AnakAsuhController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\anak_asuh  $anak_asuh
+     * @param  \App\Models\pengasuh  $pengasuh
      * @return \Illuminate\Http\Response
      */
-    public function edit(anak_asuh $anak_asuh)
+    public function edit(AnakAsuh $AnakAsuh)
     {
         //
     }
@@ -64,10 +64,10 @@ class AnakAsuhController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\anak_asuh  $anak_asuh
+     * @param  \App\Models\pengasuh  $pengasuh
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, anak_asuh $anak_asuh)
+    public function update(Request $request, AnakAsuh $AnakAsuh)
     {
         //
     }
@@ -75,10 +75,10 @@ class AnakAsuhController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\anak_asuh  $anak_asuh
+     * @param  \App\Models\pengasuh  $pengasuh
      * @return \Illuminate\Http\Response
      */
-    public function destroy(anak_asuh $anak_asuh)
+    public function destroy(AnakAsuh $AnakAsuh)
     {
         //
     }

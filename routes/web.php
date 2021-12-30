@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PengasuhController;
+use App\Http\Controllers\AnakAsuhController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,11 +49,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
-   Route::get('buku', function(){
-       return view('buku.index');
-})->middleware(['role:pengguna']);
+    
+    Route::resource('pengasuh', PengasuhController::class)->middleware(['role:admin']);
 
-Route::get('pengarang', function(){
-    return view('pengarang.index');
-})->middleware(['role:admin']);
+    Route::resource('AnakAsuh', AnakAsuhController::class)->middleware(['role:admin']); 
+
+
 });

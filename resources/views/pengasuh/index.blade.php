@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sistem Pondok Yatim</title>
+    <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -46,11 +46,47 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Halaman Admin</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Data Pengasuh</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Tambahkan Data</a>
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
-
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Nama Pengasuh</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>Umur</th>
+                                            <th>Aksi</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1.</td>
+                                            <td>Tiger Nixon</td>
+                                            <td>Laki-Laki</td>
+                                            <td>30 Tahun</td>
+                                            <td>
+                                            <form action="" method="post">
+                                            <a href="" class="btn btn-outline-info">Edit</a>
+                                            <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin menghapusnya')">Delete</button>
+                                            </form>
+                                            </td>
+                                            
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                  
                 </div>
                 <!-- /.container-fluid -->
