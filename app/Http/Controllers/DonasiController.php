@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\donasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DonasiController extends Controller
 {
@@ -14,7 +15,11 @@ class DonasiController extends Controller
      */
     public function index()
     {
-        //
+      	// mengambil data dari table donasi
+    	$donasi = DB::table('donasis')->get();
+ 
+    	// mengirim data donasi ke view index
+    	return view('index',['donasis' => $donasi]);
     }
 
     /**

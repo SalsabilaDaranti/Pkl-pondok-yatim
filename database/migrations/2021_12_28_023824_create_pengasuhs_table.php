@@ -18,10 +18,6 @@ class CreatePengasuhsTable extends Migration
             $table->string('nama');
             $table->string('jenis_kelamin');
             $table->integer('umur');
-            
-            $table->foreign('id')->references('id')
-            ->on('anak_asuhs')->onUpdate('cascade')
-            ->onDelete('cascade');
             $table->timestamps();
         });
     }

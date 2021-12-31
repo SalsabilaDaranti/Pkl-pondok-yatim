@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\pengasuh;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PengasuhController extends Controller
 {
@@ -14,7 +15,10 @@ class PengasuhController extends Controller
      */
     public function index()
     {
-        return view('pengasuh.index');
+        $pengasuh = DB::table('pengasuhs')->get();
+       // return view('pengasuh.index');
+       return view('pengasuh.index',['pengasuh' => $pengasuh]); 
+       return view('pengasuh.create',['pengasuh' => $pengasuh]); 
     }
 
     /**
@@ -35,7 +39,7 @@ class PengasuhController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    
     }
 
     /**
@@ -55,9 +59,10 @@ class PengasuhController extends Controller
      * @param  \App\Models\pengasuh  $pengasuh
      * @return \Illuminate\Http\Response
      */
-    public function edit(pengasuh $pengasuh)
+    public function edit($id)
     {
-        //
+        $pengasuh = Pengasuh::find($id);
+        return view('pengasuh.edit')->with(compact('pengasuh'));
     }
 
     /**
